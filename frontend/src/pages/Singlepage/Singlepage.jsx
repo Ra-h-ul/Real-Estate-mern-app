@@ -1,35 +1,34 @@
 import React from "react";
 import "./Singlepage.css";
-import "../../index.css"
+import "../../index.css";
+
 import { listData } from "../../lib/dummydata";
 import Searchfilter from "../../components/Searchfilter/Searchfilter";
 import Card from "../../components/Card/Card";
+import Map from "../../components/Map/Map";
+
+
 const data = listData;
 
 function Singlepage() {
   return (
     <>
-    <div className="listpage">
+      <div className="listpage">
+        <div className="ListContainer">
+          <div className="searchFiter">
+            <Searchfilter />
 
-    <div className="ListContainer">
-      <div className="searchFiter">
-        <Searchfilter/>
+            {data.map((item) => (
+              <Card key={item.id} item={item} />
+            ))}
+          </div>
+        </div>
 
-        {
-          data.map(item=>(
-            <Card key={item.id} item={item}/>
-          ))
-        }
-
+        <div className="mapContainer">
+        <Map items={data}/>
+        
       </div>
-      
     </div>
-
-    <div className="mapContainer">map</div>
-
-    </div>
-
-
     </>
   );
 }

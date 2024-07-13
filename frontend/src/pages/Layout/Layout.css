@@ -38,7 +38,7 @@
   
   
   .content{
-    /* background-color: bisque; */
+    height: 100vh;
     flex: 1;
     
   }

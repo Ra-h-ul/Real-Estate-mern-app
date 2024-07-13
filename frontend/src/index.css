@@ -9,21 +9,24 @@
 body{
   font-family: "Lato", sans-serif;
   overflow: hidden;
+  
 }
 
 .layout{
-  background-color: red;
+  
   height: 100vh;
   max-width: 1366px ;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 1025px) {
   .layout {
-    background-color: lightcoral;
+    
     max-width: 1150px;
   }
 }
@@ -31,7 +34,7 @@ body{
 @media (min-width: 601px) and (max-width: 1024px) {
   /* Styles for screens between 601px and 1024px */
   .layout {
-    background-color: lightgreen;
+   
     max-width: 750px;
   }
 }
@@ -40,11 +43,14 @@ body{
 @media (max-width: 600px) {
   /* Styles for screens smaller than 600px */
   .layout {
-    background-color: purple;
+   
     max-width: 550px;
   }
 }
 
 
 
-
+.content{
+  /* background-color: bisque; */
+  flex: 1;
+}

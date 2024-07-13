@@ -2,6 +2,8 @@ import React from 'react'
 import "./Singlepage.css"
 import Slider from '../../components/Slider/Slider'
 import {singlePostData , userData} from '../../lib/dummydata'
+import Singlemap from '../../components/Singlemap/SingleMap';
+
 function Singlepage() {
 
   const data=singlePostData;
@@ -31,21 +33,30 @@ function Singlepage() {
             
            
           </div>
-          <p>
-              {data.description}
-              {data.description}
-              {data.description}
-             
-            </p>
+          
+          <div className='facilities'>
+            <p> Bathroom : {data.bathroom}</p>
+            <p> Bedroom :{data.bedRooms}</p>
+            <p> pet policy : Yes</p>
+          </div>
+
+          <div className='facilities small'>
+            <p> <img src="./bathtub.png" alt="" /> {data.bathroom}</p>
+            <p> <img src="./bed.png" alt="" />  {data.bedRooms}</p>
+            <p> <img src="./pet.png" alt="" />  Yes</p>
+          </div>
     </div>
 
     <div className="right">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, aliquid non, ex eos adipisci, eum delectus sequi ullam ipsam at corrupti incidunt distinctio repellat dolorem hic magnam. Saepe placeat, eum temporibus dolores exercitationem dolorem amet.
-          
-        </p>
+        <Singlemap pos={data}/>
         </div>
     </div>
+
+    <p className='description'>
+              {data.description}
+              
+             
+          </p>
 
     </>
    

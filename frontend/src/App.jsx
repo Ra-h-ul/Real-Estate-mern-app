@@ -2,7 +2,6 @@ import "./index.css"
 import Homepage from "./pages/Homepage/Homepage"
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import Listpage from "./pages/Listpage/Listpage";
-import Layout from "./pages/Layout/Layout";
 import Navbar from "./components/Navbar/Navbar";
 import Singlepage from "./pages/Singlepage/Singlepage";
 import Login from "./pages/Login/Login";

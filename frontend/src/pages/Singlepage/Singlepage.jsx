@@ -1,36 +1,55 @@
-import React from "react";
-import "./Singlepage.css";
-import "../../index.css";
-
-import { listData } from "../../lib/dummydata";
-import Searchfilter from "../../components/Searchfilter/Searchfilter";
-import Card from "../../components/Card/Card";
-import Map from "../../components/Map/Map";
-
-
-const data = listData;
-
+import React from 'react'
+import "./Singlepage.css"
+import Slider from '../../components/Slider/Slider'
+import {singlePostData , userData} from '../../lib/dummydata'
 function Singlepage() {
+
+  const data=singlePostData;
+  const userdata=userData;
   return (
     <>
-      <div className="listpage">
-        <div className="ListContainer">
-          <div className="searchFiter">
-            <Searchfilter />
+    <div className="singlepage">
 
-            {data.map((item) => (
-              <Card key={item.id} item={item} />
-            ))}
+    <div className="left">
+          <div className="imagecontainer">
+            <Slider  images={data.images}/>
           </div>
-        </div>
 
-        <div className="mapContainer">
-        <Map items={data}/>
-        
-      </div>
+          <div className="Estatedetails">
+
+            <div className="details">
+            <h1>{data.title}</h1>
+            <span>{data.address}</span>
+            <span>{data.price}</span>
+            </div>
+
+            <div className="user">
+              <img src={userdata.img} alt="" />
+              <p>{userdata.name}</p>
+              
+            </div>
+            
+           
+          </div>
+          <p>
+              {data.description}
+              {data.description}
+              {data.description}
+             
+            </p>
     </div>
+
+    <div className="right">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, aliquid non, ex eos adipisci, eum delectus sequi ullam ipsam at corrupti incidunt distinctio repellat dolorem hic magnam. Saepe placeat, eum temporibus dolores exercitationem dolorem amet.
+          
+        </p>
+        </div>
+    </div>
+
     </>
-  );
+   
+  )
 }
 
-export default Singlepage;
+export default Singlepage

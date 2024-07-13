@@ -1,0 +1,97 @@
+.slider{
+    display: flex;
+    height: 100%;
+    padding: 10px;
+
+    .fullscreen{
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        .arrow{
+            height: 100%;
+            cursor: pointer;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 36px;
+                height: 40px;
+                object-fit: cover;
+                
+            }
+            
+        }
+        .leftarrow img{
+            transform: rotate(180deg); 
+            }
+
+        .imagecontainer{
+            width: 90%;
+            height: 90%;
+            flex: 10;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .cross{
+            position: absolute;
+            
+            font-weight: bolder;
+            font-size: xx-large;
+            cursor: pointer;
+           
+            top: 0;
+            right: 0;
+            padding-right:25px ;
+        }
+    }
+
+
+    .big{
+        padding: 5px;
+        margin-top: 2px;
+        
+        flex: 3;
+        img{
+        cursor: pointer;    
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        }
+       
+    }
+
+    .small{
+        padding: 5px;
+        margin: 2px;
+        
+        flex: 1.5;
+         
+        img{
+        cursor: pointer;  
+        width: 100%;
+        height: 33%;
+        object-fit: cover;
+        border-radius: 5px;
+         }
+         
+     }
+
+    
+}   
+
+
+    

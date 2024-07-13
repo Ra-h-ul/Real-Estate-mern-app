@@ -1,0 +1,60 @@
+.searchfilter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+   
+    .bottom{
+        text-transform: capitalize;
+        display: flex;
+        margin-bottom: 30px;
+        align-items: flex-end;
+        gap: 10px;
+        
+        .item{
+            display: flex;
+            flex-direction: column;
+           
+        }
+
+        input{
+            max-width: 100px;
+            height: 40px;
+            padding: 10px;
+        }
+        select{
+            height: 40px;
+            padding: 10px;
+        }
+
+        button{
+            width: 50px;
+            height: 40px;
+            background-color: yellow;
+            border: none;
+
+        }
+        
+        
+    }
+
+    .top{
+       label{
+        margin-right: 5px;
+        text-transform: capitalize;
+        font-weight: 500;
+       }
+       input{
+        height: 40px;
+        padding: 5px;
+       }
+    }
+}
+
+h1{
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size:x-large ;
+    margin-bottom: 10px;
+}
+

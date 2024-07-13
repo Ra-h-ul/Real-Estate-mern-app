@@ -1,0 +1,45 @@
+
+.layout{
+  
+    height: 100vh;
+    max-width: 1366px ;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 1025px) {
+    .layout {
+      
+      max-width: 1150px;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    /* Styles for screens between 601px and 1024px */
+    .layout {
+     
+      max-width: 750px;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    /* Styles for screens smaller than 600px */
+    .layout {
+     
+      max-width: 550px;
+    }
+  }
+  
+  
+  
+  .content{
+    /* background-color: bisque; */
+    flex: 1;
+    
+  }
+  

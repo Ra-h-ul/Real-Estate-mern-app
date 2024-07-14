@@ -5,6 +5,7 @@ import Listpage from "./pages/Listpage/Listpage";
 import Navbar from "./components/Navbar/Navbar";
 import Singlepage from "./pages/Singlepage/Singlepage";
 import Login from "./pages/Login/Login";
+import Profile from "./pages/Profile/Profile";
 function App() {
 
   
@@ -24,6 +25,10 @@ function App() {
     {
       path:"/Login",
       element:<> <Navbar/> <Login/> </>
+    },
+    {
+      path:"/Profile",
+      element:<> <Navbar/> <Profile/> </>
     },
   ]);
 

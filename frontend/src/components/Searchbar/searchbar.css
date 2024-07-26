@@ -32,16 +32,18 @@
     }
 
     form{
+        margin-top: 0;
         border: 1px solid #999;
         display: flex;
         justify-content: space-between;
-        height: 5vh;
+        height: 20vh;
+        width: 100%;
         gap: 5px;
-
+        /* border: 1px solid red; */
         input{
             border: none;
             padding: 0px 10px;
-            width: 200px;
+            width: 100%;
             flex: 1;
 
             @media (max-width: 800px){
@@ -58,7 +60,7 @@
             cursor: pointer;
            
             @media (max-width: 800px){
-                width: 10px;
+                width: 100%;
             }
             
             

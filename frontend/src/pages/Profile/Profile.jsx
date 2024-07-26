@@ -3,9 +3,26 @@ import './Profile.css'
 import {listData} from "../../lib/dummydata";
 import Card from '../../components/Card/Card'
 import Chat from '../Chat/Chat';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 function Profile() {
-    const data = listData
+    const data = listData;
+    const navigate = useNavigate();
+    
+    const handleLogout= async ()=>{
+
+      try {
+        const res = axios.post( "http://localhost:8800/api/auth/Login");
+        localStorage.removeItem("user");
+        navigate("/")
+        
+      } catch (error) {
+        console.log("error occured");
+      }
+    }
+
   return (
     <div className="profile">
 
@@ -27,6 +44,11 @@ function Profile() {
                             Email : rahulpandita@gmail.com 
                         </p>
                     </div>
+
+                    <div className="logout" onClick={handleLogout}>
+                      <button>Log out</button>
+                    </div>
+
 
                     <div className="bottom">
                         <h1>My List</h1>

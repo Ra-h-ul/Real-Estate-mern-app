@@ -1,28 +1,51 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
 
   const [open , setOpen]= useState(false);
-
+  const [auth , setAuth] = useState(false);
   return (
     <nav>
       <div className="left">
-        <a className="logo" href="/">
+        <Link className="logo" to ={"/"}>
           <img src="logo.png" alt="logo" />
           <span>Real Estate</span>
-        </a>
+        </Link>
 
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Agents</a>
-        <a href="/">other</a>
+        <Link to ={"/"}>Home</Link>
+        <Link to ={"/list"}>Properties</Link>
+        <Link to ={"/"}>chats</Link>
+        <Link to ={"/"}>about</Link>
       </div>
       <div className="right">
-        <a href="/">Sign in</a>
-        <a className="signup" href="/">
+        
+        { auth==false &&
+        <>
+         <Link to ={"/Login"}>Sign in</Link>
+        <Link className="signup" to ={"/register"}>
           sign up
-        </a>
+        </Link>
+        </>
+         
+        }
+
+      { auth==true &&
+        <>
+         <Link to ={"/Profile"}>
+          <img className="userimage" src="./profile.png" alt="" />
+         </Link>
+        <Link className="signup" to ={"/register"}>
+        Logout
+        </Link>
+        </>
+         
+        }
+
+      
+
+        
 
         <div className="burger_menu">
           <img src="menu.png" alt="Menu icon"
@@ -30,12 +53,19 @@ function Navbar() {
           />
           
           <div className={open? "burger_menu_items active" : "burger_menu_items"}>
-            <a href="/">Home</a>
-            <a href="/">About</a>
-            <a href="/">Agents</a>
-            <a href="/">other</a>
-            <a href="/">Sign in</a>
-            <a href="/">Sign up</a>
+            <Link to ={"/"}>Home</Link>
+            <Link to ={"/list"}>Properties</Link>
+            <Link to ={"/"}>chats</Link>
+            <Link to ={"/"}>about</Link>
+            {
+              auth==false &&
+              
+              <>
+              <Link to ={"/Login"}>Sign in</Link>
+              <Link to ={"/register"}>Sign up</Link>
+              </>
+              
+            }
           </div>
 
         </div>

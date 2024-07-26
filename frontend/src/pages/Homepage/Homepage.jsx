@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../../index.css"
 import "./Homepage.css"
 import Searchbar from '../../components/Searchbar/Searchbar'
+import { AuthContext } from '../../context/AuthContext'
 
 function Homepage() {
+
+  const {currentUser} = useContext(AuthContext);
+  console.log(currentUser);
+
   return (
     <div className='content' >
 

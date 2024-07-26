@@ -1,4 +1,5 @@
 import "./index.css"
+import "./pages/Layout/Layout"
 import Homepage from "./pages/Homepage/Homepage"
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import Listpage from "./pages/Listpage/Listpage";
@@ -6,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Singlepage from "./pages/Singlepage/Singlepage";
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
+import Register from "./pages/Register/Register";
 function App() {
 
   
@@ -21,6 +23,10 @@ function App() {
     {
       path:"/:id",
       element:<> <Navbar/> <Singlepage/> </>
+    },
+    {
+      path:"/Register",
+      element:<> <Navbar/> <Register/> </>
     },
     {
       path:"/Login",

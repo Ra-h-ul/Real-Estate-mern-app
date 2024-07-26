@@ -12,11 +12,22 @@
         flex-direction: column;
         padding: 5px;
         
+
+        
+
         .userdetails{
             display: flex;
             flex-direction: column;
             gap: 20px;
             
+            .logout{
+               button{
+                padding: 10px;
+                background: rgb(196, 158, 230);
+                border: none;
+                cursor: pointer;
+               }
+            }
 
             .top{
                 display: flex;

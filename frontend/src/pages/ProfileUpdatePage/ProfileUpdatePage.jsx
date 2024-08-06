@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import "./ProfileUpdatePage.css";
 import { AuthContext } from "../../context/AuthContext";
+import apiRequest from "../../lib/apiRequest";
 import { useNavigate } from "react-router-dom";
 import UploadWidget from "../../components/UploadWidget/UploadWidget";
-import axios from "axios";
 
 function ProfileUpdatePage() {
   const { currentUser, updateUser } = useContext(AuthContext);
@@ -19,7 +19,7 @@ function ProfileUpdatePage() {
     const { username, email, password } = Object.fromEntries(formData);
 
     try {
-      const res = await axios.put(`http://localhost:8800/api//users/${currentUser.id}`, {
+      const res = await apiRequest.put(`/users/${currentUser.id}`, {
         username,
         email,
         password,
@@ -29,7 +29,7 @@ function ProfileUpdatePage() {
       navigate("/profile");
     } catch (err) {
       console.log(err);
-      setError(err.response.data.message);
+      // setError(err.response.data.message);
     }
   };
 
@@ -66,7 +66,7 @@ function ProfileUpdatePage() {
       </div>
       <div className="sideContainer">
         <img src={avatar[0] || currentUser.avatar || "/noavatar.jpg"} alt="" className="avatar" />
-        {/* <UploadWidget
+        <UploadWidget
           uwConfig={{
             cloudName: "lamadev",
             uploadPreset: "estate",
@@ -75,7 +75,7 @@ function ProfileUpdatePage() {
             folder: "avatars",
           }}
           setState={setAvatar}
-        /> */}
+        />
       </div>
     </div>
   );

@@ -58,8 +58,8 @@ function Login() {
         </div>
 
         <div className="details ip_fields">
-          <input type="text" placeholder="Username" name="username" required minLength={3} maxLength={20} />
-          <input type="text" placeholder="Password" name="Password" required minLength={3} maxLength={20} />
+          <input type="text" placeholder="Username" name="username" required minLength={3} maxLength={40} />
+          <input type="text" placeholder="Password" name="Password" required minLength={3} maxLength={40} />
           <button >Login in</button>
         </div>
 

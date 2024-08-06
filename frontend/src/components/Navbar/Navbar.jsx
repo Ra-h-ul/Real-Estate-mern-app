@@ -23,7 +23,7 @@ function Navbar() {
       </div>
       <div className="right">
         
-        { currentUser==false &&
+        { currentUser===false &&
         <>
          <Link to ={"/Login"}>Sign in</Link>
         <Link className="signup" to ={"/register"}>

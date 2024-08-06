@@ -47,7 +47,7 @@ export const updateUser = async (req, res) => {
         ...(avatar && { avatar }),
       },
     });
-
+    console.log("yes");
     const { password: userPassword, ...rest } = updatedUser;
 
     res.status(200).json(rest);

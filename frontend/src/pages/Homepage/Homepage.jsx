@@ -8,6 +8,7 @@ function Homepage() {
 
   const {currentUser} = useContext(AuthContext);
   console.log(currentUser);
+  
 
   return (
     <div className='content' >

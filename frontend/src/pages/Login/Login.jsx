@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../Register/Register.css";
 import { Link,  useNavigate } from "react-router-dom";
 import axios from "axios";
+import { AuthContext } from "../../context/AuthContext";
 
 function Login() {
 
@@ -9,6 +10,11 @@ function Login() {
     
   const [err,setErr]=useState("");
   const [loading , setLoading] = useState("");
+  
+  const {updateUser} = useContext(AuthContext);
+  
+  
+
   const navigate = useNavigate();
 
   const handlesubmit= async (e)=>{
@@ -21,11 +27,11 @@ function Login() {
    
       
       try {
-          const res = await axios.post( "http://localhost:8800/api/auth/Login", {
+          const res = await axios.post( "http://localhost:8800/api/auth/login", {
               username,password
           })
-          
-          localStorage.setItem("user",JSON.stringify(res.data))
+        
+          updateUser(res.data)
           navigate("/")
           console.log(res);
           

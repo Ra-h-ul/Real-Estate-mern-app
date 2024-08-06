@@ -8,9 +8,10 @@ import Singlepage from "./pages/Singlepage/Singlepage";
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 import Register from "./pages/Register/Register";
+import ProfileUpdatePage from "./pages/ProfileUpdatePage/ProfileUpdatePage";
 function App() {
 
-  
+    
   const router  = createBrowserRouter([
     {
       path:"/",
@@ -36,6 +37,10 @@ function App() {
       path:"/Profile",
       element:<> <Navbar/> <Profile/> </>
     },
+    {
+      path:"/Profile/Update",
+      element: <> <Navbar/> <ProfileUpdatePage/> </>
+    }
   ]);
 
   return (

@@ -16,16 +16,21 @@ function SinglePage() {
   const handleSave = async () => {
     if (!currentUser) {
       navigate("/login");
+      return; // Ensure the function exits if the user is not logged in
     }
-    // AFTER REACT 19 UPDATE TO USEOPTIMISTIK HOOK
+  
+    // Toggle the saved state optimistically
     setSaved((prev) => !prev);
+  
     try {
       await apiRequest.post("/users/save", { postId: post.id });
     } catch (err) {
-      console.log(err);
+      console.error("Axios Error:", err.response?.data || err.message);
+      // Revert the saved state if the request fails
       setSaved((prev) => !prev);
     }
   };
+  
 
   return (
     <div className="singlePage">

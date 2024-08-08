@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-  baseURL: "http://localhost:8800/api",
+  baseURL: "https://hotel-booking-react-app-6laf.onrender.com/api",
   withCredentials: true,
 });
 

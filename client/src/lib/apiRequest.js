@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-  baseURL: "http://localhost:5173",
+  baseURL: "https://real-estate-mern-app-1b88.onrender.com",
   withCredentials: true,
 });
 

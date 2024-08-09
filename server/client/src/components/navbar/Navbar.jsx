@@ -22,9 +22,9 @@ function Navbar() {
           <span>LamaEstate</span>
         </a>
         <a href="/">Home</a>
-        <a href="/">About</a>
+{/*         <a href="/">About</a>
         <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        <a href="/">Agents</a> */}
       </div>
       <div className="right">
         {currentUser ? (
@@ -53,11 +53,15 @@ function Navbar() {
         </div>
         <div className={open ? "menu active" : "menu"}>
           <a href="/">Home</a>
-          <a href="/">About</a>
+{/*           <a href="/">About</a>
           <a href="/">Contact</a>
-          <a href="/">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <a href="/">Agents</a> */}
+          { currentuser ? (  
+          <Link to="/profile" className="profile">
+          ) : (
+          <a href="/login">Sign in</a>
+          <a href="/register">Sign up</a>
+          ) }
         </div>
       </div>
     </nav>

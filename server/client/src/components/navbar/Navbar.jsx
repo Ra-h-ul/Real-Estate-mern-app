@@ -20,8 +20,8 @@ function Navbar() {
     <nav>
       <div className="left">
         <a href="/" className="logo">
-          <img src="/logo.png" alt="LamaEstate Logo" />
-          <span>LamaEstate</span>
+          <img src="/logo.png" alt="UrbanNest Logo" />
+          <span>UrbanNest</span>
         </a>
         <a href="/">Home</a>
       </div>

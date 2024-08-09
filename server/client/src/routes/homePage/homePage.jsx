@@ -11,28 +11,20 @@ function HomePage() {
     <div className="homePage">
       <div className="textContainer">
         <div className="wrapper">
-          <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
+          <h1 className="title">Your Key to Finding the Perfect Home</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-            explicabo suscipit cum eius, iure est nulla animi consequatur
-            facilis id pariatur fugit quos laudantium temporibus dolor ea
-            repellat provident impedit!
+            Discover your dream home with UrbanNest,
+            the ultimate tool for effortless real estate exploration. 
+            Whether you're buying, renting, or just browsing, 
+            our user-friendly platform connects you with the perfect property in no time.
+            With advanced search filters, real-time updates, and personalized recommendations, 
+            UrbanNest makes finding your next home simple, fast, and stress-free. 
+            Explore neighborhoods, compare properties, and connect with trusted agents—all in one place.
+            Start your journey to a new home today with UrbanNest,
+            where every search brings you closer to your ideal space
           </p>
           <SearchBar />
-          <div className="boxes">
-            <div className="box">
-              <h1>16+</h1>
-              <h2>Years of Experience</h2>
-            </div>
-            <div className="box">
-              <h1>200</h1>
-              <h2>Award Gained</h2>
-            </div>
-            <div className="box">
-              <h1>2000+</h1>
-              <h2>Property Ready</h2>
-            </div>
-          </div>
+         
         </div>
       </div>
       <div className="imgContainer">

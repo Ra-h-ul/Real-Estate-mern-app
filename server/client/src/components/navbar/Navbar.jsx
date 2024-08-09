@@ -63,7 +63,7 @@ function Navbar() {
           <a href="/register">Sign up</a>
           ) }
         </div>
-      </div>
+      
     </nav>
   );
 }

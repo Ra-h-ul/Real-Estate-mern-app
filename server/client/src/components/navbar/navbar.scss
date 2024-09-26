@@ -5,7 +5,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; // Ensure positioning for menu absolute items
 
   a {
     transition: all 0.4s ease;
@@ -24,11 +23,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 50px;
-
-    @include sm {
-      gap: 20px; // Reduced gap for mobile
-      flex-direction: column; // Stack elements vertically on mobile
-    }
 
     .logo {
       font-weight: bold;
@@ -52,39 +46,29 @@ nav {
       }
     }
   }
-
   .right {
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    // background-color: #fcf5f3;
     height: 100%;
 
     @include md {
       background-color: transparent;
     }
 
-    @include sm {
-      flex-direction: column; // Stack elements vertically on mobile
-      align-items: center;
-    }
-
     a {
       padding: 12px 24px;
       margin: 20px;
-
-      @include sm {
-        padding: 8px 16px; // Reduced padding for mobile
-        margin: 10px;      // Reduced margin for mobile
-      }
     }
 
-    .user {
+    .user{
       display: flex;
       align-items: center;
       font-weight: bold;
 
-      img {
+      img{
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -92,20 +76,20 @@ nav {
         margin-right: 20px;
       }
 
-      span {
-        @include sm {
+      span{
+        @include sm{
           display: none;
         }
       }
 
-      .profile {
+      .profile{
         padding: 12px 24px;
         background-color: #fece51;
         cursor: pointer;
         border: none;
         position: relative;
-
-        .notification {
+        
+        .notification{
           position: absolute;
           top: -8px;
           right: -8px;
@@ -118,6 +102,7 @@ nav {
           align-items: center;
           justify-content: center;
         }
+
       }
     }
 
@@ -141,35 +126,30 @@ nav {
     }
 
     .menu {
+    
       position: absolute;
       top: 0;
-      right: -100%; // Start off-screen
+      right: 0;
       background-color: black;
       color: white;
       height: 100vh;
-      width: 100%; // Fill the whole screen
+      width: 0%;
       transition: all 1s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       font-size: 24px;
-      z-index: 1000; // Ensure it appears on top
 
       &.active {
-        right: 0; // Slide into view
+        width: 50%;
       }
 
       @include sm {
         a {
-          display: block; // Make sure links are visible in mobile menu
+          display: initial;
         }
       }
     }
   }
-}
-
-// Add overflow-x hidden to avoid horizontal overflow
-body {
-  overflow-x: hidden;
 }
